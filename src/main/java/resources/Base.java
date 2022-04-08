@@ -30,9 +30,13 @@ public class Base {
 			driver = new ChromeDriver();
 			
 		}else if(browserName.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver",
+					"drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			
 		}else if(browserName.equals("IE")) {
+			System.setProperty("webdriver.ie.driver",
+					"drivers\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
