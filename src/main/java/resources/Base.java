@@ -24,6 +24,7 @@ public class Base {
 		prop.load(fis);
 		//String browserName = prop.getProperty("browser");
 		String browserName = System.getProperty("browser");
+		System.out.println("Browser is:========="+browserName+"============");
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					"drivers\\chromedriver.exe");
