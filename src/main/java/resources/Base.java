@@ -20,12 +20,12 @@ public class Base {
 	
 	public WebDriver initializeDriver() throws IOException {
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\NJY\\new-workspace\\E2EProject\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream("src\\main\\java\\resources\\data.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\NJY\\new-workspace\\E2EProject\\drivers\\chromedriver.exe");
+					"drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
 		}else if(browserName.equals("firefox")) {
