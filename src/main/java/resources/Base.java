@@ -33,7 +33,7 @@ public class Base {
 			if(browserName.contains("headless")) {
 				options.addArguments("headless");
 			}
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 			
 		}else if(browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
